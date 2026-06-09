@@ -1,0 +1,23 @@
+package com.brotherhunnp;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class HomeController {
+
+    @GetMapping("/")
+    public String home() {
+        return """
+            <html>
+            <head>
+                <title>BrotherhunNp</title>
+            </head>
+            <body>
+                <h1>Welcome to BrotherhunNp</h1>
+                <p>This website is powered by Java Spring Boot.</p>
+            </body>
+            </html>
+            """;
+    }
+}
